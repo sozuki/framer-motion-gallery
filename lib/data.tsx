@@ -6,8 +6,8 @@ interface Component {
 }
 export const components : Component[] = [
   {
-    name: "Animation",
+    name: "Movement animation",
     category: "Animation",
-    href: "/animation"
+    href: "/movement"
   }
 ]

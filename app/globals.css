@@ -30,4 +30,34 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  .code-golden {
+    color:#fc6;
+  }
+  .code-orange {
+    color:#f97;
+  }
+  .code-blue-100 {
+    color:#adf;
+  }
+  .code-blue-200 {
+    color:#2cd;
+  }
+  .code-blue-300 {
+    color:#0bf
+  }
+  .code-purple {
+    color: #b8f;
+  }
+  .code-dimmed-100 {
+    color:#999;
+  }
+  .code-dimmed-200 {
+    color:#666;
+  }
+  .code-dimmed-300 {
+    color:#444;
+  }
+  .bg-code {
+    background: #141414;
+  }
 }

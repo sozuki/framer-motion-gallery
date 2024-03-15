@@ -9,5 +9,10 @@ export const components : Component[] = [
     name: "Movement animation",
     category: "Animation",
     href: "/movement"
+  },
+  {
+    name: "Rotation animation",
+    category: "Animation",
+    href: "/rotate"
   }
 ]

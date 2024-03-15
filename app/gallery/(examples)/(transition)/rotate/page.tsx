@@ -1,9 +1,9 @@
-import {Movement} from "@/ui/animation/movement";
+import {Rotate} from "@/ui/transition/rotate";
 
 export default function Page() {
   return (
     <div>
-      <Movement />
+      <Rotate></Rotate>
     </div>
   )
 }

@@ -17,7 +17,7 @@ export function Transform() {
         className="w-full h-96 bg-gradient-radial from-purple-400 to-indigo-500 flex justify-center items-center max-w-2xl overflow-hidden">
         <motion.div
           animate={{x, y, rotate, scale}}
-          className="bg-white size-48 rounded-2xl "/>
+          className="bg-white size-24 sm:size-48 rounded-2xl "/>
       </div>
       <div className="w-full max-w-2xl flex rounded-b-xl px-6 py-3 bg-code">
         {/* code */}

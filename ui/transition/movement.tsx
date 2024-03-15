@@ -24,12 +24,10 @@ export function Movement() {
           <button onClick={() => setX(80)}>
             <HiArrowRight className="text-gray-400 h-6 w-6 hover:text-gray-950"/>
           </button>
+        </div>
         <button onClick={() => setY(80)} className="mt-[-0.25rem]">
           <HiArrowDown className="text-gray-400 h-6 w-6 hover:text-gray-950"/>
         </button>
-        </div>
-        {/*<GrRotateRight />*/}
-        {/*<GrRotateLeft />*/}
       </div>
       <motion.div className="bg-inherit border border-gray-500 h-20 w-20 rounded-lg"
                   animate={{x, y}}

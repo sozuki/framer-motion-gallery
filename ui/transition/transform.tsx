@@ -22,7 +22,7 @@ export function Transform() {
       <div className="w-full max-w-2xl flex rounded-b-xl px-6 py-3 bg-code">
         {/* code */}
         <code className="basis-1/2">
-          <pre className="code-golden ">
+          <pre className="code-golden">
             <div><span className="code-dimmed-100">{"<"}</span>{"motion.div"}</div>
             <div className="code-blue-100"> <span className="code-blue-100">{`  animate`}</span><span
               className="code-dimmed-100">{`={{`}</span></div>
@@ -99,8 +99,6 @@ export function Transform() {
               </button>
             </div>
           </div>
-        
-        
         </div>
       </div>
     </div>

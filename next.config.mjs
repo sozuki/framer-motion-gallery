@@ -1,12 +1,10 @@
-import million from "million/compiler";
+// @ts-check
 
-/** @type {import('next').NextConfig} */
+/**
+ * @type {import('next').NextConfig}
+ */
 const nextConfig = {
-  reactStrictMode: true,
-};
+  /* config options here */
+}
 
-const millionConfig = {
-  auto: { rsc: true },
-};
-
-export default million.next(nextConfig, millionConfig);
+export default nextConfig

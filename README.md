@@ -57,17 +57,18 @@ The word "Animations" is also referred to as "Elements" or "Components"
 
 ### Framer motion animation elements
 
-| Name      | Description                                         | Done                     |
-|-----------|-----------------------------------------------------|--------------------------| 
-| Animation | Create a simple example of Animation                | :heavy_multiplication_x: |
-| Variants  | Create a simple example of animation using Variants | :heavy_multiplication_x: |
-| Gestures  | Create a simple example of animation using Gestures | :heavy_multiplication_x: |
-| Drag      | Create a simple example of animation with Dragging  | :heavy_multiplication_x: |
-| Scroll    | Create a simple example of animation with Scroll    | :heavy_multiplication_x: |
-| SVG       | Create a simple example of SVG animation            | :heavy_multiplication_x: |
-| 3D        | Create a simple example of 3D animation with fiber  | :heavy_multiplication_x: |
-| Lazy      | Create a simple example of Lazy component usage     | :heavy_multiplication_x: |
-| Reorder   | Create a simple example of Reorder animation        | :heavy_multiplication_x: |
+| Name      | Description                                               | Done                     |
+|-----------|-----------------------------------------------------------|--------------------------| 
+| Animation | Create a simple example of Animation                      | :heavy_check_mark:       |
+| Layout    | Create a simple example of using layout for optimizations | :heavy_multiplication_x: |
+| Variants  | Create a simple example of animation using Variants       | :heavy_multiplication_x: |
+| Gestures  | Create a simple example of animation using Gestures       | :heavy_multiplication_x: |
+| Drag      | Create a simple example of animation with Dragging        | :heavy_multiplication_x: |
+| Scroll    | Create a simple example of animation with Scroll          | :heavy_multiplication_x: |
+| SVG       | Create a simple example of SVG animation                  | :heavy_multiplication_x: |
+| 3D        | Create a simple example of 3D animation with fiber        | :heavy_multiplication_x: |
+| Lazy      | Create a simple example of Lazy component usage           | :heavy_multiplication_x: |
+| Reorder   | Create a simple example of Reorder animation              | :heavy_multiplication_x: |
 
 ### Hooks
 

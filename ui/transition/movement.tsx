@@ -1,8 +1,6 @@
 'use client';
 import {motion} from "framer-motion";
 import {useState} from "react";
-import {GrRotateRight} from "react-icons/gr";
-import {GrRotateLeft} from "react-icons/gr";
 import {HiArrowRight} from "react-icons/hi2";
 import {HiArrowLeft} from "react-icons/hi2";
 import {HiArrowUp} from "react-icons/hi2";
@@ -10,7 +8,7 @@ import {HiArrowDown} from "react-icons/hi2";
 
 export function Movement() {
   const [x, setX] = useState<number>(0);
-  const [y, setY] = useState(0);
+  const [y, setY] = useState<number>(0);
   return (
     <div>
       <div className="flex items-center justify-center flex-col">

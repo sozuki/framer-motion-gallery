@@ -1,4 +1,4 @@
-import {MorphExample} from "@/ui/svg/example/morph-example";
+import {MorphExample} from "@/ui/svg/morph-example";
 
 export default function Page() {
   return (

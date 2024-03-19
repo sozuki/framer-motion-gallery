@@ -27,7 +27,13 @@ export const components : Component[] = [
   {
     name: "Morphing example",
     category: "SVG",
-    href: "/morph-example",
+    href: "/morph-morph-example",
     date: "2024-03-18"
+  },
+  {
+    name: "Theme switcher",
+    category: "SVG",
+    href: "/theme-switcher",
+    date: "2024-03-19"
   }
 ]

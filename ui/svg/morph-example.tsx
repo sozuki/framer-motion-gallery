@@ -51,11 +51,13 @@ export function MorphExample() {
   }, [pathIndex]);
   
   return (
-    <svg width="400" height="400">
-      <g transform="translate(10 10) scale(17 17)">
-        <motion.path fill={fill} d={path} />
-      </g>
-    </svg>
+    <div>
+      <svg width="400" height="400">
+        <g transform="translate(10 10) scale(17 17)">
+          <motion.path fill={fill} d={path}/>
+        </g>
+      </svg>
+    </div>
   );
 }
 

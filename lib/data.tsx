@@ -1,23 +1,33 @@
-type Category = "Animation" | "3D" | "not defined"
-interface Component {
+type Category = "Animation" | "3D" | "SVG" | "not defined"
+export interface Component {
   name: string,
   category: Category,
-  href: string
+  href: string,
+  date: string
 }
 export const components : Component[] = [
   {
     name: "Movement animation",
     category: "Animation",
-    href: "/movement"
+    href: "/movement",
+    date: "2024-03-15"
   },
   {
     name: "Rotation animation",
     category: "Animation",
-    href: "/rotate"
+    href: "/rotate",
+    date: "2024-03-15"
   },
   {
     name: "Transform playground",
     category: "Animation",
-    href: "/transform"
+    href: "/transform",
+    date: "2024-03-15"
+  },
+  {
+    name: "Morphing example",
+    category: "SVG",
+    href: "/morph-example",
+    date: "2024-03-18"
   }
 ]

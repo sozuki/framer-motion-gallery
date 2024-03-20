@@ -12,7 +12,10 @@ type Store = {
 
 const useStore = create<Store>()((set) => ({
   pathIndex: 0,
-  inc: () => set((state) => ({pathIndex: state.pathIndex + 1})),
+  inc: () => set((state) => {
+    if (state.pathIndex === 3 - 1) return {pathIndex: 1} // paths.length === 3
+    return {pathIndex: state.pathIndex + 1}
+  }),
 }))
 
 export const shape1 = "m0,0h53v178H0V0Z";
@@ -39,14 +42,11 @@ export default function SVGMorph({paths}: { paths: string[] }) {
       duration: 0.4,
       ease: "easeInOut",
       delay: 0.5,
-      // onComplete: () => {
-      //   if (pathIndex === paths.length - 1) {
-      //     progress.set(0);
-      //     setPathIndex(1);
-      //   } else {
-      //     setPathIndex(pathIndex + 1);
-      //   }
-      // }
+      onComplete: () => {
+        if (pathIndex === paths.length - 1) {
+          progress.set(0);
+        }
+      }
     })
     
     return () => {
@@ -57,9 +57,7 @@ export default function SVGMorph({paths}: { paths: string[] }) {
   
   
   return (
-    
     <motion.path fill="white" d={path}/>
-  
   )
   
 }
@@ -76,11 +74,12 @@ export function MorphExample2() {
   }
   
   return (
-    <button className="bg-black p-6" onClick={inc}>
+    <button className="bg-black p-6 flex gap-4" onClick={inc}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 178" width="64" height="64">
-        <SVGMorph paths={[shape1, shape1_morphed, shape1, shape1_morphed, shape1, shape1_morphed, shape1]}/>
-        <SVGMorph paths={[shape2, shape2_morphed, shape2, shape2_morphed, shape2, shape2_morphed, shape2,]}/>
+        <SVGMorph paths={[shape1, shape1_morphed, shape1]}/>
+        <SVGMorph paths={[shape2, shape2_morphed, shape2]}/>
       </svg>
+
     </button>
   )
 }

@@ -13,9 +13,9 @@ export const components : Component[] = [
     date: "2024-03-15"
   },
   {
-    name: "Morphing example",
+    name: "Devil emoji",
     category: "SVG",
-    href: "morph-example",
+    href: "devil-emoji",
     date: "2024-03-18"
   },
   {

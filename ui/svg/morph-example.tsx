@@ -15,6 +15,15 @@ const lightning = "M7 2v11h3v9l7-12h-4l4-8z";
 const note =
   "M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z";
 
+// const paths = [lightning, hand]
+export const shape1 = "m0,0h53v178H0V0Z";
+
+export const shape2 = "m91,0h53v178h-53V0Z";
+
+export const shape1_morphed = "m70.45,134.74l-57.68,43.26V0l56.48,42.36,1.19,92.38Z";
+
+export const shape2_morphed = "m65.52,39.56l67.58,49.44-67.58,49.44V39.56Z";
+
 const paths = [lightning, hand, plane, heart, note, star, lightning];
 
 export const colors = [
@@ -30,10 +39,17 @@ export const colors = [
 export function MorphExample() {
   const [pathIndex, setPathIndex] = useState(0);
   const progress = useMotionValue(pathIndex);
-  const fill = useTransform(progress, paths.map(getIndex), colors);
-  const path = useFlubber(progress, paths);
+  const fill = useTransform(progress, paths.map(getIndex), colors); // it's pretty confusing from the
+  // first glance if you don't know what is useTransform. So, what this line does is simply telling framer motion that we
+  // want to have matching colors. So, it's something like that (progress, [0,1,2,3,4,5], ["color0", "color1", "color2", "color3", "color4", "color5"]
+  // so for each progress(which is the index of the first map) we want a corresponding color in our color array. progress = 0 -> "color0" , progress = 1 -> "color1"
+  const path = useFlubber(progress, paths); // well, it's confusing as hell as it uses interpolate flubber function which somehow makes 10 paths between path 1 and 2 and then animates morphing between them
+  // so under the hood it's just a useTransform function that tells that for progress 1.1 we want path1.1. for progress 1.2 we want path1.2 and so on
+  // and it takes only 2 arguments because it just writes paths.map(getIndex) in the function itself
   
   useEffect(() => {
+    // then we just animate it with universal function which alone weights 15.5 kb, so the loading speed of the page sucks
+    // the loop can be described easily: path1.1, color1.1 -> path1.2 , color1.2 -> ... ->path2, color2 -> stop -> pathIndex++ -> new loop
     const animation = animate(progress, pathIndex, {
       duration: 0.8,
       ease: "easeInOut",
@@ -52,7 +68,7 @@ export function MorphExample() {
   
   return (
     <div>
-      <svg width="400" height="400">
+      <svg width="64" height="64">
         <g transform="translate(10 10) scale(17 17)">
           <motion.path fill={fill} d={path}/>
         </g>

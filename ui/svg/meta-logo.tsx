@@ -3,7 +3,6 @@ import {useEffect} from "react";
 import {animate, motion, useMotionValue, useTransform} from "framer-motion";
 import {interpolate} from "flubber";
 import {create} from 'zustand';
-import {getIndex} from "@/lib/use-flubber";
 
 // store
 type Store = {
@@ -48,35 +47,30 @@ export const colorsWhite = ["#FFF", "#FFF", "#FFF", "#FFF", "#FFF", "#FFF"];
 export const colorsBlack = ["#000", "#000", "#000", "#000", "#000", "#000"];
 
 // components
-export function SVGMorph({paths, colors, metaInst}: { paths: string[], colors: string[], metaInst?: boolean }) {
+export function SVGMorph({paths, colors}: { paths: string[], colors: string[] }) {
   const pathIndex = useStore((state) => state.pathIndex);
   const progress = useMotionValue(pathIndex);
   const arrayOfIndex = paths.map((_, i) => i)
   const path = useTransform(progress, arrayOfIndex, paths, {
     mixer: (a, b) => interpolate(a, b, {maxSegmentLength: 3})
   })
-  const fill = useTransform(progress, paths.map(getIndex), colors);
-  
+  const fill = useTransform(progress, arrayOfIndex, colors);
   
   useEffect(() => {
-    
     const animation = animate(progress, pathIndex, {
       duration: 0.6,
       ease: "easeInOut",
-      // delay: 0.2,
       onComplete: () => {
         if (pathIndex === paths.length - 1) {
           progress.set(0);
         }
       }
     })
-    
     return () => {
       animation.stop()
     }
     
   }, [pathIndex])
-  
   
   return (
     <motion.path fill={fill} d={path}/>
@@ -96,7 +90,6 @@ export function MetaLogo() {
         <SVGMorph colors={colorsWhite}
                   paths={paths2}/>
       </svg>
-    
     </button>
   )
 }

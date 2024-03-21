@@ -13,21 +13,15 @@ export const components : Component[] = [
     date: "2024-03-15"
   },
   {
-    name: "Devil emoji",
-    category: "SVG",
-    href: "devil-emoji",
-    date: "2024-03-20"
-  },
-  {
-    name: "Play button",
-    category: "SVG",
-    href: "play-button",
-    date: "2024-03-20"
-  },
-  {
     name: "Meta logo transformation",
     category: "SVG",
     href: "meta-logo",
     date: "2024-03-21"
-  }
+  },
+  {
+    name: "Gooey text",
+    category: "SVG",
+    href: "gooey-text",
+    date: "2024-03-21"
+  },
 ]

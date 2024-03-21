@@ -62,17 +62,8 @@ export default function SVGMorph({paths}: { paths: string[] }) {
   
 }
 
-export function MorphExample2() {
-  const path1 = useRef<SVGPathElement>(null);
-  const path2 = useRef<SVGPathElement>(null);
-  const [isAnimated, setIsAnimated] = useState(false);
+export function PlayButton() {
   const inc = useStore(state => state.inc);
-  
-  function handleAnimation() {
-    // setIsAnimated(!isAnimated);
-    
-  }
-  
   return (
     <button className="bg-black p-6 flex gap-4" onClick={inc}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 178" width="64" height="64">

@@ -1,4 +1,4 @@
-import {DevilEmoji} from "@/ui/svg/morph-example";
+import {DevilEmoji} from "@/ui/svg/devil-emoji";
 
 export default function Page() {
   return (

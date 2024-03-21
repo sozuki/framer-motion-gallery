@@ -1,10 +1,7 @@
-import {MorphExample2} from "@/ui/svg/theme-switcher";
-import {Morph} from "@/ui/svg/morph";
+import {PlayButton} from "@/ui/svg/play-button";
 
 export default function Page() {
   return (
-    // <ThemeSwitcher />
-    // <Morph />
-    <MorphExample2 />
+    <PlayButton />
   )
 }

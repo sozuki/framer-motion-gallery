@@ -16,12 +16,18 @@ export const components : Component[] = [
     name: "Devil emoji",
     category: "SVG",
     href: "devil-emoji",
-    date: "2024-03-18"
+    date: "2024-03-20"
   },
   {
-    name: "Theme switcher",
+    name: "Play button",
     category: "SVG",
-    href: "theme-switcher",
-    date: "2024-03-19"
+    href: "play-button",
+    date: "2024-03-20"
+  },
+  {
+    name: "Meta logo transformation",
+    category: "SVG",
+    href: "meta-logo",
+    date: "2024-03-21"
   }
 ]

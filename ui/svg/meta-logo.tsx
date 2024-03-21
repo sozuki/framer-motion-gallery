@@ -39,7 +39,7 @@ export default function SVGMorph({paths, colors}: { paths: string[], colors: str
   const progress = useMotionValue(pathIndex);
   const arrayOfIndex = paths.map((_, i) => i)
   const path = useTransform(progress, arrayOfIndex, paths, {
-    mixer: (a, b) => interpolate(a, b, {maxSegmentLength: 1.5})
+    mixer: (a, b) => interpolate(a, b, {maxSegmentLength: 3})
   })
   const fill = useTransform(progress, paths.map(getIndex), colors);
   

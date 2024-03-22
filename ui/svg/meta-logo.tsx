@@ -83,34 +83,32 @@ export function MetaLogo() {
   const inc = useStore(state => state.inc);
   const update = useStore(state => state.update);
   return (
-    <div className="flex flex-col gap-16">
-      <p className="max-w-xl text-2xl font-medium text-center">Click the buttons on the left or the image itself to animate</p>
-      <div className="flex gap-32">
-        <div className="flex flex-col gap-2 justify-center items-center">
-          {
-            paths0.map((_, index) => {
-                return (
-                  <button key={index} onClick={() => update(index)}>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" className="w-12 h-12">
-                      <path d={paths0[index]} fill="black"/>
-                      <path d={paths1[index]} fill="white"/>
-                      <path d={paths2[index]} fill="white"/>
-                    </svg>
-                  </button>)
-            })
-          }
-        </div>
-        <button className="bg-white p-6 gap-4 rounded-full flex flex-col justify-center items-center" onClick={inc}>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" className="w-80 h-80">
-            <SVGMorph colors={colorsBlack}
-                      paths={paths0}/>
-            <SVGMorph colors={colorsWhite}
-                      paths={paths1}/>
-            <SVGMorph colors={colorsWhite}
-                      paths={paths2}/>
-          </svg>
-        </button>
+    <>
+      <div className="flex flex-col gap-2 justify-center items-center">
+        {
+          paths0.map((_, index) => {
+            return (
+              <button key={index} onClick={() => update(index)}>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" className="w-12 h-12">
+                  <path d={paths0[index]} fill="black"/>
+                  <path d={paths1[index]} fill="white"/>
+                  <path d={paths2[index]} fill="white"/>
+                </svg>
+              </button>)
+          })
+        }
       </div>
-    </div>
+      <button className="bg-white p-6 gap-4 rounded-full flex flex-col justify-center items-center" onClick={inc}>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" className="w-80 h-80">
+          <SVGMorph colors={colorsBlack}
+                    paths={paths0}/>
+          <SVGMorph colors={colorsWhite}
+                    paths={paths1}/>
+          <SVGMorph colors={colorsWhite}
+                    paths={paths2}/>
+        </svg>
+      </button>
+    </>
+  
   )
 }

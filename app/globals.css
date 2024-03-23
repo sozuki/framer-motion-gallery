@@ -63,4 +63,19 @@ body {
   .bg-code {
     background: #141414;
   }
+  .mask{
+
+    mask-image: url('../public/gallery/mask1.svg');
+
+    mask-repeat: no-repeat;
+
+    mask-size: 40px;
+
+    background: #ec4e39;
+
+    position: absolute;
+
+    color: black;
+
+  }
 }

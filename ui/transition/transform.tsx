@@ -18,7 +18,7 @@ export function Transform() {
         className="w-full h-96 bg-gradient-radial from-purple-400 to-indigo-500 flex justify-center items-center max-w-2xl overflow-hidden">
         <motion.div
           animate={{x, y, rotate, scale}}
-          className="bg-white size-24 sm:size-48 rounded-2xl "/>
+          className="bg-white size-24 sm:size-48 rounded-2xl cursor-not-allowed"/>
       </div>
       <div className="w-full max-w-2xl flex rounded-b-xl px-6 py-3 bg-code">
         {/* code */}
@@ -106,6 +106,7 @@ export function Transform() {
   )
 }
 
+
 export function DragScene() {
   const [x, setX] = useState<number>(0);
   const [y, setY] = useState<number>(0);
@@ -119,26 +120,81 @@ export function DragScene() {
         <motion.div
           drag
           dragConstraints={dragConstrainsRef}
+          whileTap={{scale: 0.9, borderRadius: "25%"}}
           onDrag={(_, info) => {
             setX(info.point.x);
             setY(info.point.y);
           }}
-          className="bg-white size-24 sm:size-48 rounded-2xl "/>
+          className="bg-white size-24 sm:size-48 rounded-2xl"/>
+      </div>
+      <div className="w-full max-w-2xl flex sm:flex-row flex-col-reverse gap-6 rounded-b-xl px-6 py-6 bg-code">
+        {/* code */}
+        <code className="basis-1/2 flex flex-col ">
+  <pre className="code-golden">
+    <div><span className="code-dimmed-100">{"<"}</span>{"motion.div"}</div>
+ <div className="code-blue-100"><span className="code-blue-100">{`  whileTap`}</span><span
+   className="code-dimmed-100">{"={{"}</span></div>
+    <div>{`    scale: `}<span className="code-orange">{"0.9"}</span>,</div>
+    <div>{`    borderRadius: `}<span className="code-orange">{"\"25%\""}</span></div>
+    <div><span className="code-dimmed-100">{"  }}"}</span></div>
+    <div className="code-blue-100"><span className="code-blue-100">{`  drag`}</span></div>
+    <div className="code-blue-100"><span className="code-blue-100">{`  dragConstraints`}</span><span
+      className="code-dimmed-100">{"={"}</span><span className="code-orange">{"\n    dragConstrainsRef\n"}</span><span
+      className="code-dimmed-100">{"  }"}</span></div>
+    <div><span className="code-dimmed-100">{"/>"}</span></div>
+  </pre>
+        </code>
+        
+        
+        {/* tweaks*/}
+        {/*<div className="flex flex-col basis-1/2  items-center bg-slate-900">*/}
+        
+        {/*<div className="flex flex-col ">*/}
+        {/*  <div className="code-golden">x: <span className="code-orange">{`${x}`}</span></div>*/}
+        {/*  <div className="code-golden">y: <span className="code-orange">{`${y}`}</span></div>*/}
+        {/*</div>*/}
+        {/*</div>*/}
+      </div>
+    </div>
+  )
+}
+
+
+export function SkewScene() {
+  const [skewX, setSkewX] = useState<number>(0);
+  const [skewY, setSkewY] = useState<number>(0);
+  const [skew, setSkew] = useState<number>(30);
+  return (
+    <div className="flex flex-col p-3 justify-center items-center w-full overflow-hidden ">
+      {/* main scene*/}
+      <div
+        className="w-full h-96 bg-gradient-radial from-purple-400 to-indigo-500 flex justify-center items-center max-w-2xl overflow-hidden">
+        <motion.div
+          onHoverStart={() => setSkew(30)}
+          onHoverEnd={() => setSkew(0)}
+          onTap={() => setSkew(skew - 30)}
+          animate={{skew}}
+          className="bg-white size-24 sm:size-48 rounded-2xl"/>
       </div>
       <div className="w-full max-w-2xl flex sm:flex-row flex-col-reverse gap-6 rounded-b-xl px-6 py-6 bg-code">
         {/* code */}
         <code className="basis-1/2 flex flex-col items-center">
   <pre className="code-golden">
     <div><span className="code-dimmed-100">{"<"}</span>{"motion.div"}</div>
-    <div className="code-blue-100"><span className="code-blue-100">{`  drag`}</span></div>
-    <div className="code-blue-100"><span className="code-blue-100">{`  dragConstraints`}</span><span
-      className="code-dimmed-100">{"={"}</span><span className="code-orange">{"\n    dragConstrainsRef\n"}</span><span
-      className="code-dimmed-100">{"  }"}</span></div>
-    {/*<div className="code-blue-100"><span className="code-blue-100">{`  onDrag`}</span><span*/}
-    {/*  className="code-dimmed-100">{"={("}</span><span className="code-white">{`_, info) => {`}</span></div>*/}
-    {/*<div>{`    setX(info.point.x);`}</div>*/}
-    {/*<div>{`    setY(info.point.y);`}</div>*/}
-    {/*<div><span className="code-dimmed-100">{"  }}"}</span></div>*/}
+    <div><span className="code-blue-100">{"  HoverStart"}</span><span
+      className="code-dimmed-100">{"={() =>"}</span>{" setSkew"}<span
+      className="code-dimmed-100">{"("}</span><span className="code-orange">{"30"}</span><span
+      className="code-dimmed-100">{")}"}</span></div>
+    <div><span className="code-blue-100">{"  HoverEnd"}</span><span
+      className="code-dimmed-100">{"={() =>"}</span>{" setSkew"}<span
+      className="code-dimmed-100">{"("}</span><span className="code-orange">{"0"}</span><span
+      className="code-dimmed-100">{")}"}</span></div>
+    <div><span className="code-blue-100">{"  Tap"}</span><span
+      className="code-dimmed-100">{"={() =>"}</span>{" setSkew"}<span
+      className="code-dimmed-100">{"("}</span>{"skew - "}<span
+      className="code-orange">{"30"}</span><span className="code-dimmed-100">{")}"}</span></div>
+    <div><span className="code-blue-100">{"  animate"}</span><span
+      className="code-dimmed-100">{"={{"}</span>{" skew "}<span className="code-dimmed-100">{"}}"}</span></div>
     <div><span className="code-dimmed-100">{"/>"}</span></div>
   </pre>
         </code>

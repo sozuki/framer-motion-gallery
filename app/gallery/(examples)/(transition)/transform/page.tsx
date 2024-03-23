@@ -1,4 +1,4 @@
-import {DragScene, Transform} from "@/ui/transition/transform";
+import {DragScene, SkewScene, Transform} from "@/ui/transition/transform";
 
 export default function Page() {
   return (
@@ -10,6 +10,10 @@ export default function Page() {
       <div className="flex flex-col justify-center items-center gap-4">
         <h1 className="text-xl">Drag</h1>
         <DragScene/>
+      </div>
+      <div className="flex flex-col justify-center items-center gap-4">
+        <h1 className="text-xl">Skew</h1>
+        <SkewScene />
       </div>
     </div>
   )

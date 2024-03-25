@@ -1,4 +1,4 @@
-type Category = "Animation" | "3D" | "SVG" | "not defined"
+type Category = "Animation" | "3D" | "SVG" | "Cursor" | "not defined"
 export interface Component {
   name: string,
   category: Category,
@@ -23,5 +23,11 @@ export const components : Component[] = [
     category: "SVG",
     href: "gooey-text",
     date: "2024-03-21"
+  },
+  {
+    name: "Mask cursor animation",
+    category: "Cursor",
+    href: "mask-cursor",
+    date: "2024-03-25"
   },
 ]

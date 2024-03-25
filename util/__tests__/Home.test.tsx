@@ -1,4 +1,3 @@
-// <reference types="@testing-library/jest-dom" />
 import { render, screen, waitFor } from '@testing-library/react';
 import Home from '@/app/(home)/page';
 

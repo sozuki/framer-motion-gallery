@@ -1,4 +1,4 @@
-type Category = "Animation" | "3D" | "SVG" | "Cursor" | "not defined"
+type Category = "Animation" | "3D" | "SVG" | "Cursor" | "Scroll" | "not defined"
 export interface Component {
   name: string,
   category: Category,
@@ -30,4 +30,10 @@ export const components : Component[] = [
     href: "mask-cursor",
     date: "2024-03-25"
   },
+  {
+    name: "Horizontal scroll",
+    category: "Scroll",
+    href: "horizontal-scroll",
+    date: "2024-04-10"
+  }
 ]

@@ -35,5 +35,11 @@ export const components : Component[] = [
     category: "Scroll",
     href: "horizontal-scroll",
     date: "2024-04-10"
+  },
+  {
+    name: "Horizontal parallax",
+    category: "Scroll",
+    href: "horizontal-parallax",
+    date: "2024-04-11"
   }
 ]

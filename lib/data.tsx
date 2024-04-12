@@ -1,4 +1,4 @@
-type Category = "Animation" | "3D" | "SVG" | "Cursor" | "Scroll" | "not defined"
+type Category = "Animation" | "3D" | "SVG" | "Cursor" | "Scroll" | "Page transition"| "Menu" |"not defined"
 export interface Component {
   name: string,
   category: Category,
@@ -41,5 +41,17 @@ export const components : Component[] = [
     category: "Scroll",
     href: "horizontal-parallax",
     date: "2024-04-11"
+  },
+  {
+    name: "Slide in page transition",
+    category: "Page transition",
+    href: "slide-in",
+    date: "2024-04-11"
+  },
+  {
+    name: "Curved menu",
+    category: "Menu",
+    href: "curved-menu",
+    date: "2024-04-12"
   }
 ]

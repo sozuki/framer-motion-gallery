@@ -3,7 +3,7 @@ import {useState} from "react";
 import styles from './curved-menu.module.scss';
 import Link from "next/link";
 import {AnimatePresence, motion} from "framer-motion";
-import {curve, menuSlide, scale, slide} from "@/ui/menu/curved-menu/anim";
+import {easeInOutQuart, menuSlide, scale, slide} from "@/ui/menu/curved-menu/anim";
 
 export function CurvedMenu() {
   const [isActive, setIsActive] = useState<boolean>(false);
@@ -109,8 +109,15 @@ export function HeaderLink({href, name, index}: { href: string, name: string, in
   )
 }
 
+
 export function Curve() {
-  
+  const initialPath: string = `M100 0 L100 ${window.innerHeight} Q-100 ${window.innerHeight / 2} 100 0 `;
+  const animatePath: string = `M100 0 L100 ${window.innerHeight} Q100 ${window.innerHeight / 2} 100 0 `;
+  const curve = {
+    initial: {d: initialPath},
+    enter: {d: animatePath, transition: {duration: 0.8, ease: easeInOutQuart}},
+    exit: {d: initialPath, transition: {duration: 0.8, ease: easeInOutQuart}}
+  }
   return (
     <svg className="absolute -left-24 top-0 h-full text-[#1c1d20] fill-[#1c1d20] w-24">
       <motion.path

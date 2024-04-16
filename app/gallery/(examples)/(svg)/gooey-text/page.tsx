@@ -31,28 +31,18 @@ const letters = {
 }
 
 const word1: string[] = [
-  letters.S,
-  letters.V,
-  letters.I,
-  letters.A,
-  letters.T,
   letters.O,
-  letters.S,
   letters.L,
+  letters.H,
   letters.A,
-  letters.V
+
 ]
 const word2: string[] = [
-  letters.Z,
-  letters.U,
-  letters.B,
-  letters.R,
-  letters.Y,
-  letters.T,
-  letters.C,
-  letters.K,
-  letters.I,
-  letters.Y
+  letters.O,
+  letters.L,
+  letters.E,
+  letters.H,
+
 ]
 export default function Page() {
   return (

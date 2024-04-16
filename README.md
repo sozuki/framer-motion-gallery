@@ -65,14 +65,13 @@ The word "Animations" is also referred to as "Elements" or "Components"
 |-----------|-----------------------------------------------------------|--------------------------| 
 | Animation | Create a simple example of Animation                      | :heavy_check_mark:       |
 | Layout    | Create a simple example of using layout for optimizations | :heavy_multiplication_x: |
-| Variants  | Create a simple example of animation using Variants       | :heavy_multiplication_x: |
+| Variants  | Create a simple example of animation using Variants       | :heavy_check_mark:       |
 | Gestures  | Create a simple example of animation using Gestures       | :heavy_check_mark:       |
 | Drag      | Create a simple example of animation with Dragging        | :heavy_check_mark:       |
 | Scroll    | Create a simple example of animation with Scroll          | :heavy_multiplication_x: |
 | SVG       | Create a simple example of SVG animation                  | :heavy_check_mark:       |
 | 3D        | Create a simple example of 3D animation with fiber        | :heavy_multiplication_x: |
 | Lazy      | Create a simple example of Lazy component usage           | :heavy_multiplication_x: |
-| Reorder   | Create a simple example of Reorder animation              | :heavy_multiplication_x: |
 
 ### Hooks
 

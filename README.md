@@ -72,6 +72,7 @@ The word "Animations" is also referred to as "Elements" or "Components"
 | SVG       | Create a simple example of SVG animation                  | :heavy_check_mark:       |
 | 3D        | Create a simple example of 3D animation with fiber        | :heavy_multiplication_x: |
 | Lazy      | Create a simple example of Lazy component usage           | :heavy_multiplication_x: |
+| Parallax  | Create a simple example of Parallax component usage       | :heavy_check_mark:       |
 
 ### Hooks
 
